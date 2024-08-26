@@ -1,17 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
-
-const woodDensities = {
-  pine: 0.51,
-  spruce: 0.45,
-  birch: 0.67
-}
 
 const yieldClasses = {
   pine: [4, 6, 8, 10, 12, 14],
@@ -20,31 +14,33 @@ const yieldClasses = {
 }
 
 export default function PeatlandDepthCalculator() {
-    const [species, setSpecies] = useState<keyof typeof woodDensities | "">("")
-    const [yieldClass, setYieldClass] = useState("")
-    const [volume, setVolume] = useState("")
-    const [tolerableDepth, setTolerableDepth] = useState<{ lower: number, upper: number } | null>(null)
-    const [woodDensity, setWoodDensity] = useState<number | null>(null)  // Add this line
-  
-    useEffect(() => {
-        if (species) {
-            setWoodDensity(woodDensities[species as keyof typeof woodDensities])
-            setYieldClass("")
-            setVolume("")
-          }
-    }, [species])
-  
-    const calculateDepth = () => {
-      if (!species || !yieldClass || !volume) return
-  
-      const volumeInCm3 = parseFloat(volume) * 1000000  // Convert m³ to cm³
-      const woodDensityValue = woodDensities[species]
-  
-      const lowerBoundCarbon = (volumeInCm3 * woodDensityValue * 0.5) / 4700
-      const upperBoundCarbon = (volumeInCm3 * woodDensityValue * 0.5) / 10400
-  
-      setTolerableDepth({ lower: lowerBoundCarbon, upper: upperBoundCarbon })
-    }
+  const [species, setSpecies] = useState<keyof typeof yieldClasses | "">("")
+  const [yieldClass, setYieldClass] = useState("")
+  const [volume, setVolume] = useState("")
+  const [woodDensity, setWoodDensity] = useState("")
+  const [tolerableDepth, setTolerableDepth] = useState<{ lower: number, upper: number } | null>(null)
+
+  const calculateDepth = () => {
+    if (!species || !yieldClass || !volume || !woodDensity) return
+
+    // User inputs:
+    // - volume (m³)
+    // - woodDensity (g/cm³)
+    // - species (pine, spruce, or birch)
+    // - yieldClass (depends on species)
+
+    const volumeInCm3 = parseFloat(volume) * 1000000  // Convert m³ to cm³
+    const densityInGPerCm3 = parseFloat(woodDensity)
+
+    // Calculate carbon content (50% of dry mass)
+    const carbonContent = volumeInCm3 * densityInGPerCm3 * 0.5
+
+    // Calculate tolerable depth range
+    const lowerBoundDepth = carbonContent / 10400
+    const upperBoundDepth = carbonContent / 4700
+
+    setTolerableDepth({ lower: lowerBoundDepth, upper: upperBoundDepth })
+  }
 
   return (
     <Card className="w-[350px]">
@@ -55,7 +51,7 @@ export default function PeatlandDepthCalculator() {
         <form className="space-y-4">
           <div className="space-y-2">
             <Label htmlFor="species">Species</Label>
-            <Select onValueChange={setSpecies}>
+            <Select onValueChange={(value) => setSpecies(value as keyof typeof yieldClasses)}>
               <SelectTrigger id="species">
                 <SelectValue placeholder="Select species" />
               </SelectTrigger>
@@ -88,27 +84,28 @@ export default function PeatlandDepthCalculator() {
               type="number" 
               value={volume} 
               onChange={(e) => setVolume(e.target.value)}
-              disabled={!species || !yieldClass}
+              placeholder="Enter volume from Excel sheet"
             />
           </div>
 
-          <Button 
-            type="button" 
-            onClick={calculateDepth} 
-            className="w-full"
-            disabled={!species || !yieldClass || !volume}
-          >
-            Calculate Depth
-          </Button>
+          <div className="space-y-2">
+            <Label htmlFor="woodDensity">Wood Density (g/cm³)</Label>
+            <Input 
+              id="woodDensity" 
+              type="number" 
+              value={woodDensity} 
+              onChange={(e) => setWoodDensity(e.target.value)}
+              placeholder="Enter wood density"
+            />
+          </div>
+
+          <Button type="button" onClick={calculateDepth}>Calculate</Button>
         </form>
 
-        {tolerableDepth !== null && (
-          <div className="mt-4 p-4 bg-muted rounded-md">
-            <p className="text-center">
-              Tolerable Peat Depth: <br />
-              Lower Bound: <span className="font-bold">{tolerableDepth.lower.toFixed(2)} cm</span> <br />
-              Upper Bound: <span className="font-bold">{tolerableDepth.upper.toFixed(2)} cm</span>
-            </p>
+        {tolerableDepth && (
+          <div className="mt-4">
+            <p>Lower Bound Depth: {tolerableDepth.lower.toFixed(2)} cm</p>
+            <p>Upper Bound Depth: {tolerableDepth.upper.toFixed(2)} cm</p>
           </div>
         )}
       </CardContent>
