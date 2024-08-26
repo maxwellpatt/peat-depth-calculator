@@ -1,0 +1,238 @@
+Owner: @Capucine 
+
+**What can we do legally**
+
+In Scotland, we can plant on peat up to 50cm depth, but drains cannot be deeper than 30cm. In England and Wales, we can plant on peat up to 30cm depth.
+
+**Why we shouldn’t do what we legally can**
+
+Planting on peat is overall never a good idea. The process of planting on peat requires changing the conditions which led to peat formation in the first place. The change in conditions leads to peat carbon emissions that dwarf the sequestration benefits of the trees. 
+
+Below is a breakdown of how the conditions change for each peat type
+
+- Blanket bog
+    
+    Blanket bogs require near-permanent waterlogged conditions to create the anaerobic conditions that restrict vegetative matter degradation.
+    
+    Forestry requires non-waterlogged conditions, therefore peat is drained leading to vegetative matter to decompose and emit carbon. Trees further lower the watertable of the hydrological unit, leading to more peat being exposed oxygen and decomposing into greenhouse gases.
+    
+    Blanket bogs form in extremely acidic conditions (pH <4), leading to few microbes surviving and being able to decompose organic matter.
+    
+    Forestry rarely (if ever) establishes under extremely low pH conditions, leading the land to be limed to encourage establishment. Changing the pH leads to a flourishing of bacteria due to changing conditions, leading to rapid vegetitive decomposition and mass carbon release.
+    
+    Blanket bog are very nutrient-poor due to the vegetative matter not being decomposed.
+    
+    Forestry requires nutrients to be available for saplings to establish themselves. This leads to fertiliser additions, which increase the land N, P, and K content. Microbes reproduce very rapidly under conditions of high food (vegetative organic matter) availability and high nutrient (NPK) availability, leading to a proliferation of microbial content and high subsequent carbon release due to peat decomposition. 
+    
+- Fen
+    
+    Fens require near-permanent waterlogged conditions to create the anaerobic conditions that restrict vegetative matter degradation.
+    
+    Forestry requires non-waterlogged conditions, therefore peat is drained leading to vegetative matter to decompose and emit carbon. Trees further lower the watertable of the hydrological unit, leading to more peat being exposed oxygen and decomposing into greenhouse gases.
+    
+    Fens form in extremely acidic/calcareous conditions (pH <4, pH >8.5), leading to few microbes surviving and being able to decompose organic matter. In certain cases, fens can be neutral in pH.
+    
+    Forestry rarely (if ever) establishes under extreme pH conditions, leading the land to be limed (if it’s acidic) to encourage establishment. Extremely calcareous conditions are rarely afforested due to difficulties in establishing forests, whereas neutral fens do not experience a pH change due to existing pH suitability. Changing the pH leads to a flourishing of bacteria due to changing conditions, leading to rapid vegetitive decomposition and mass carbon release.
+    
+    Fens can be either nutrient-poor or nutrient-rich depending on the watersource. 
+    
+    Forestry requires nutrients to be available for saplings to establish themselves. Where fens are nutrient-poor, landowners add fertiliser to the fen to increase the land N, P, and K content. Microbes reproduce very rapidly under conditions of high food (vegetative organic matter) availability and high nutrient (NPK) availability, leading to a proliferation of microbial content and high subsequent carbon release due to peat decomposition. 
+    
+- Wet heath
+    
+    Wet heath establishes on wet (watertable <15cm) extremely acidic soils. The heath contributes actively to the acidity of the soil by associating with ericoid mycorrhizal fungi, which release root exudates of a particularly low pH. The low pH leads to metal precipitation when redox reactions occurs (fluctuating watertable), which often results in ironpans or other pan formations, further restricting water percolation. The pH, pans, and waterlogging lead to the accumulation of peat up to 45cm depth. 
+    
+    Forestry operations would require subsoiling to break up the pan, which would increase water percolation and remove anaerobic conditions. The low pH would require liming to allow trees to establish. The ericoid mycorrhizal fungi would be addressed through fertiliser additions to promote tree establishment despite the lack of fungal symbionts. The result would be a loss of all the conditions that lead to peat accumulation, and subsequent rapid peat oxidation. Forestry operations may still fail due to the reformation of the pan and the lack of fungal symbionts to enable community communication. 
+    
+- Dry heath
+    
+    Dry heath establishes on dry (watertable >15cm) acidic or calcareous soils. The heath contributes actively to lowering the pH of the soil by associating with ericoid mycorrhizal fungi, which release root exudates of a particularly low pH. The low pH on acidic soils leads to metal precipitation when redox reactions occurs (fluctuating watertable), which often results in ironpans or other pan formations. In calcareous soils, acidic root exudates lead to a neutralisation reaction and usually the formation of a carbonic pan. Pan formation tends to be deeper (>30cm), leading to flucutating watertables and pan formation at deeper depths. Peat formation is usually limited to <20cm.
+    
+    Forestry operations would require subsoiling to break up the pan when it is too shallow for rooting depths, which would increase water percolation. Locations with low pH would require liming to allow trees to establish. The ericoid mycorrhizal fungi would be addressed through fertiliser additions to promote tree establishment despite the lack of fungal symbionts. The result would be an increase in peat oxidation due to pH changes and fertiliser inputs, however dry heaths are more amenable to forestry operations and can co-exist with forests in mosaics. Forestry operations may nonetheless still fail due to the reformation of the pan and the lack of fungal symbionts to enable community communication. 
+    
+
+**How deep is too deep**
+
+Planting on peat is overall never a good idea. However, if some peat exists in otherwise plantable areas, it is useful to know how deep is too deep to inform our forestry design. A calculation was therefore devised to assess when individual tree sequestration equals the carbon emissions caused by the ground preparation and established of that tree on peat. 
+
+- The calculations are as follows:
+    
+    Step 1 - lower and upper bounds of peat carbon content
+    
+    Each standard cubic metre of peat may contain [**between 47 and 104kg** **of carbon](https://www.wildlifetrusts.org/sites/default/files/2022-02/Peat%20use%20summary%201990-2020%20The%20Wildlife%20Trusts.pdf).** 
+    
+    Carbon has a molar mass of 12, while oxygen has a molar mass of 16. Subsequently this translates to a potential carbon dioxide release between: 
+    
+    $$
+    
+    16 (2 (\frac{47}{12})) + 47 = 172.3 \space \mathrm{kg \space CO_2}
+    
+    $$
+    
+    $$
+    6 (2 (\frac{104}{12})) + 104 = 381.3 \space \mathrm{kg \space CO_2}
+    $$
+    
+    Step 2 - calculating tree rooting width
+    
+    Tree specifics were based on [Forestry Research’s Forest Management Tables](https://cdn.forestresearch.gov.uk/1971/03/fcbk034.pdf), which were [digitised](https://zuluforest.sharepoint.com/:x:/s/RD/ERh0ue8QypNHrPv7r69rMGsBF3h1xc7w-rUMgpa0qSAaSQ?e=AZqJ3w) to allow for coding of the calculations. Age to maturity was calculated as the first year when the Increment MAI volume to 7cm (m3) equalled the yield class (following conversations with Dr. @Denis Alder)
+    
+    Subsequently, according to ESC-generated estimated yield classes for an area and the age at which the tree reaches maturity, the rooting width was obtained using the following equation:
+    
+    $$
+    Hectare\:to\:m^2/stocking\:density
+    
+    = 10,000/stocking\:density
+    
+    = xx\:m^2/tree = rooting\:width
+    $$
+    
+    Please find the stocking density that applies to your specific tree species, yield class, and age to maturity according to the tables above ([here it is again](https://zuluforest.sharepoint.com/:x:/s/RD/ERh0ue8QypNHrPv7r69rMGsBF3h1xc7w-rUMgpa0qSAaSQ?e=5g6jyu))
+    
+    Step 3 - calculating peat carbon loss per 1cm subsidence
+    
+    This step calculates how much carbon is released for each cm of peat lost within the area rooted by the tree (rooting width, calculated above).
+    
+    Lower bound of carbon per cm3
+    
+    $$
+    47kgC m^{-3} =
+    0.000047kg C cm^{-3}
+    $$
+    
+    Upper bound of carbon per cm3
+    
+    $$
+    104kgC m^{-3} =
+    0.000104kg C cm^{-3}
+    $$
+    
+    Total area in cm3
+    
+    $$
+    10,000 * rooting\:width = rooting_{width}\:in\:cm^2
+    $$
+    
+    Peat loss per cm3 subsidence (lower bound)
+    
+    $$
+    rooting\:width\:in\:cm^2 *0.000047
+    = lower\:carbon\:loss\:kg C
+    $$
+    
+    Peat loss per cm3 subsidence (lower bound)
+    
+    $$
+    rooting\:width\:in\:cm^2 *0.000104
+    = upper\:carbon\:loss\:kg C
+    $$
+    
+    Step 4 - calculating above-ground carbon sequestration
+    
+    This step calculates how much carbon the tree has sequestered at maturity given its yield class. Wood density is collated in the [excel](https://zuluforest.sharepoint.com/:x:/s/RD/ERh0ue8QypNHrPv7r69rMGsBF3h1xc7w-rUMgpa0qSAaSQ?e=AZqJ3w), but was originally obtained from [this website](https://www.wood-database.com/) following recommendations from Dr @Denis Alder. Carbon contribution to organic matter was determined to be 0.5 according to the [2019 Refinement To The 2006 IPCC Guidelines](https://www.ipcc-nggip.iges.or.jp/public/2019rf/pdf/4_Volume4/19R_V4_Ch12_HarvestedWoodProducts.pdf). 
+    
+    From the excel table, please find on that correct row (species, age at maturity, yield class) the value under column Main crop after thinning volume in cubic meters to top diameters of 7cm. This is the ‘Volume in m3’
+    
+    On the next tab along the bottom, please find the relevant Wood density. 
+    
+    Carbon content remains static at 50%
+    
+    The calculations are as follows:
+    
+    $$
+    
+    Volume\:per\:tree = Volume\:in\:m^3/stocking\:density
+    
+    $$
+    
+    $$
+    
+    Carbon\:per\:tree\:kgC= Volume\:per\:tree * wood\:density *carbon\:content
+    
+    $$
+    
+    Step 5 - calculating when sequestration equals emissions
+    
+    This step defines how much peat can be lost before sequestration equals emissions. Given the two bounds of peat density, the result is a range of peat depths that would equal your tree species/yield class upper and lower tolerable bounds of peat depth.
+    
+    Please note that due to the assumptions, these are over-estimates, meaning the absolute tolerable peat depth is lower than the figures below.
+    
+    Calculating lower density peat depth that equals sequestration:
+    
+    $$
+    
+    Lower\:density\:peat\:depth= Carbon\:per\:tree\:kgC/lower\:carbon\:loss\:kg C
+    
+    $$
+    
+    Calculating higher density peat depth that equals sequestration:
+    
+    $$
+    
+    Higher\:density\:peat\:depth= Carbon\:per\:tree\:kgC/upper\:carbon\:loss_{kg C}
+    
+    $$
+    
+    Step 6 - simplify the equations
+    
+    The above equations can be simplified as a few operators strike out as follows:
+    
+    $$
+    lower\:carbon\:loss\:kg C = \frac{10,000}{stocking\:density}*10,000*0.000047
+    $$
+    
+    $$
+    Carbon\:per\:tree\:kgC=\frac{volume\:in\:cm^3}{stocking\:density}*wood\:density*carbon\:content
+    $$
+    
+    Subsequently the equation becomes:
+    
+    $$
+    lower\:bound\:carbon=\frac{(\frac{volume\:in\:cm^3*wood\:density*carbon\:content}{stocking\:density})}{\frac{10,000*10,000*0.000047}{stocking\:density}}
+    $$
+    
+    Which simplifies into:
+    
+    $$
+    lower\:bound\:carbon = \frac{volume\:in\:cm^3*wood\:density*carbon\:content}{\cancel{stocking\:density}}*\frac{\cancel{stocking\:density}}{4700}
+    $$
+    
+    Which therefore becomes:
+    
+    $$
+    lower\:bound\:carbon=\frac{volume\:in\:cm^3*wood\:density*carbon\:content}{4700}
+    $$
+    
+    Subsequently upper bound carbon depth becomes:
+    
+    $$
+    upper\:bound\:carbon=\frac{volume\:in\:cm^3*wood\:density*carbon\:content}{10400}
+    $$
+    
+- A few assumptions were made to enable this calculation:
+    1. Ground preparation assumes drainage and liming, with peat loss being due to the loss of anaerobic conditions and low pH. The only peats considered are therefore acidic fens, bogs, and wet heath. 
+    2. Peat loss is limited to the peat within the tree rooting system (rooting width). This is not an accurate assumption as forestry operations drain entire hydrological units rather than discrete circles, however the rooting width was used in this calculation to allow for an area to be calculated.
+    3. Forestry practices follow Forestry Commission timber practices, including spacing and rooting width. This is due to the yield classes and age to maturity being defined by the Forestry Commission tables, that were created for the timber industry. In reality, thinning and spacing would be different which may lead to variations in age to maturity and carbon sequestered at maturity. 
+    4. Peat is healthy prior to forestry practices and static in its emissions/sequestration. The calculations are based on the assumption of 0 emissions other than those caused by forestry practices. 
+
+**The full breakdown of the calculations and cancelling out of variables can be found above. To make your lives easier, the simplified calculation can be found below for each tree species, per yield class.**
+
+Lower density carbon depth limit:
+
+$$
+lower\:bound\:carbon=\frac{volume\:in\:cm^3*wood\:density*0.5}{4700}
+$$
+
+Higher density carbon depth limit:
+
+$$
+upper\:bound\: carbon=\frac{volume\: in\:cm^3*wood\:density*0.5}{10400}
+$$
+
+*Volume in cm^3* refers to the value in the [excel](https://zuluforest.sharepoint.com/:x:/s/RD/ERh0ue8QypNHrPv7r69rMGsBF3h1xc7w-rUMgpa0qSAaSQ?e=AZqJ3w) tab named ‘Yield data’, column named “Main crop after thinning volume in cubic meters to top diameters of 7cm” for a specific tree species/yield class combination at age of maturity.
+
+*Wood density* refers to the species-specific value found in the tab ‘Wood density data’ in [this excel](https://zuluforest.sharepoint.com/:x:/s/RD/ERh0ue8QypNHrPv7r69rMGsBF3h1xc7w-rUMgpa0qSAaSQ?e=AZqJ3w).
+
+**How fast does peat degrade under forest land cover**
+
+According to [this article (longest running study of peat subsidence under forest land cover](https://www.forestresearch.gov.uk/publications/ground-surface-subsidence-in-an-afforested-peatland-fifty-years-after-drainage-and-planting/)), over 50 years peat subsidence was 56.8cm. **This equals a peat loss at a rate of 1.136cm/year**.
